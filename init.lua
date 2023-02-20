@@ -31,6 +31,12 @@ require('lazy').setup({
   -- Git related plugins
   'tpope/vim-fugitive',
   'tpope/vim-rhubarb',
+  {
+    'goolord/alpha-nvim',
+    config = function ()
+      require 'alpha'.setup(require 'alpha.themes.dashboard'.config)
+    end
+  },
 
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
